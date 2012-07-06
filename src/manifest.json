@@ -1,0 +1,31 @@
+{
+  "name": "APK Downloader",
+  "version": "1.2.1",
+  "description": "Download APK from Android Market.",
+  "icons": {"16": "icon_16.png", "48": "icon_48.png", "128": "icon_128.png"},
+  "page_action": {
+    "default_icon": "page_action.png",
+    "default_title": "APK Downloader",
+	"popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background_page": "background.html",
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/apkdownloader-contenturi/*"],
+      "js": ["download.js"]
+    },
+    {
+      "matches": ["*://play.google.com/store/apps/details?id=*"],
+      "js": ["market.js"]
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "https://www.google.com/accounts/ClientLogin",
+	"*://android.clients.google.com/*",
+	"*://*.android.clients.google.com/*"
+  ]
+}

@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script type="text/javascript" src="base64.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript">
+			if (typeof localStorage.authToken == "undefined" || typeof localStorage.deviceId == "undefined")
+			{
+				chrome.tabs.create({"url" : "options.html"});
+			}
+			else
+			{
+				chrome.tabs.getSelected(null,function(tab) {
+					var match = /play\.google\.com\/store\/apps\/details\?id=([\w\d\.\_]+)/i.exec(tab.url);
+					if (match)
+					{
+						MarketSession.download(match[1]);
+					}
+				});
+			}
+		</script>
+	</head>
+<body>
+</body>
+</html>
