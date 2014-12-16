@@ -3,6 +3,7 @@
   "version": "1.2.1",
   "description": "Download APK from Android Market.",
   "icons": {"16": "icon_16.png", "48": "icon_48.png", "128": "icon_128.png"},
+  "update_url": "http://codekiem.com/apk-downloader/updates.xml",
   "page_action": {
     "default_icon": "page_action.png",
     "default_title": "APK Downloader",
@@ -12,7 +13,7 @@
   "background_page": "background.html",
   "content_scripts": [
     {
-      "matches": ["http://localhost/apkdownloader-contenturi/*"],
+      "matches": ["http://codekiem.com/apk-downloader/dl/*"],
       "js": ["download.js"]
     },
     {

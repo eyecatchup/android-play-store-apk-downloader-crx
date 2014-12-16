@@ -27,8 +27,7 @@ a
 
 #options h1
 {
-	margin:0px 0px 15px 8px;
-	text-align: center;	
+	margin:0px 0px 0px 8px;	
 }
 
 #options form
@@ -124,6 +123,50 @@ a
 #options form p.submit
 {
 	text-align:right;
+}
+
+#warning
+{
+	display:none;
+}
+
+#warning .red
+{
+	padding: 10px;
+	border: 1px solid #DB0000;
+	color: #690000;
+	background: #FC6D6D;
+}
+
+#warning .red a
+{
+	color: #FFFFFF;
+	font-weight:bold;
+}
+
+#warning .green
+{
+	padding: 10px;
+	border: 1px solid #ACD40D;
+	color: #728C0A;
+	background: #E5FA91;
+}
+
+#footer
+{
+	text-align:center;
+	color:#555;
+}
+
+#footer a
+{
+	color:#555;
+	font-weight:bold;
+}
+
+#footer a:hover
+{
+	color:#ff3333;
 }
 
 #slt_country, #slt_operator
